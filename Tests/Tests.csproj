@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -19,6 +19,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Challenges\Challenges.csproj" />
+    <ProjectReference Include="..\Fundamentals\Fundamentals.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Fundamentals">
+      <HintPath>..\Fundamentals\bin\Debug\net6.0\Fundamentals.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
