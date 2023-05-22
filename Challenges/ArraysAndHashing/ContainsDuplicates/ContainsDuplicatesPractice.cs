@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates
+﻿namespace Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates
 {
     public class ContainsDuplicatesPractice
     {
@@ -71,7 +63,7 @@ namespace Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates
                 int length = nums.Length - indexI;
                 int[] subArray = nums.Skip(indexI + 1).Take(length).ToArray();
                 
-                containsDuplicates = ContainsDuplicateBinarySearch(key, subArray, indexI);
+                containsDuplicates = ContainsDuplicateBinarySearch(key, subArray);
                 indexI++;
             }
 
@@ -112,8 +104,8 @@ namespace Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates
             }
             return false;
         }
-
-        private bool ContainsDuplicateBinarySearch(int key, int[] subArray, int index)
+        
+        private bool ContainsDuplicateBinarySearch(int key, int[] subArray)
         {
             bool containsDuplicates = false;
             int left = 0;
@@ -122,7 +114,6 @@ namespace Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates
 
             while (left <= right && !containsDuplicates)
             {
-                //left = index + 1;
                 int middle = (right - left) / 2;
 
                 if (key == subArray[middle])

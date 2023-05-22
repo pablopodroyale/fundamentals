@@ -2,20 +2,20 @@
 using Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates;
 using System.Linq.Expressions;
 
-namespace Tests.Fundamentals.ArraysAndHasshing.ContainsDuplicates
+namespace Tests.Challenges.ArraysAndHasshing.ContainsDuplicates
 {
     public class ContainsDuplicateTest
     {
         private ContainsDuplicatesPractice _underTest;
 
         [SetUp]
-        public void SetUp() 
+        public void SetUp()
         {
             _underTest = new ContainsDuplicatesPractice();
         }
 
         [Test]
-        //[TestCase(1, 2, 3, 1, true)]
+        [TestCase(1, 2, 3, 1, true)]
         [TestCase(3, 3, 0, 0, true)]
         public void ContainsDuplicatesTest(int num1, int num2, int num3, int num4, bool expected)
         {
@@ -23,7 +23,7 @@ namespace Tests.Fundamentals.ArraysAndHasshing.ContainsDuplicates
 
             bool containDuplicate = _underTest.ContainsDuplicate(nums);
 
-            Assert.AreEqual(expected, containDuplicate);
+            Assert.That(containDuplicate, Is.EqualTo(expected));
         }
 
         [Test]
@@ -35,10 +35,10 @@ namespace Tests.Fundamentals.ArraysAndHasshing.ContainsDuplicates
         public void ContainsDuplicatesWithWhileTest(int num1, int num2, int num3, int num4, int num5, bool expected)
         {
             List<int> nums = new List<int>();
-           
+
             if (num1 != 0)
             {
-                nums.Add(num1);   
+                nums.Add(num1);
             }
             if (num2 != 0)
             {
@@ -57,9 +57,20 @@ namespace Tests.Fundamentals.ArraysAndHasshing.ContainsDuplicates
                 nums.Add(num5);
             }
 
-            bool containDuplicate = _underTest.ContainsDuplicateCompareNext(nums.ToArray());
+            bool result = _underTest.ContainsDuplicate(nums.ToArray());
+            Assert.That(result, Is.EqualTo(expected));
 
-            Assert.That(containDuplicate, Is.EqualTo(expected));
+            result = _underTest.ContainsDuplicateWithWhileAndBinarySearch(nums.ToArray());
+            Assert.That(result, Is.EqualTo(expected));
+
+            result = _underTest.ContainsDuplicateLinq(nums.ToArray());
+            Assert.That(result, Is.EqualTo(expected));
+
+            result = _underTest.ContainsDuplicatesHashSet(nums.ToArray());
+            Assert.That(result, Is.EqualTo(expected));
+
+            result = _underTest.ContainsDuplicateCompareNext(nums.ToArray());
+            Assert.That(result, Is.EqualTo(expected));
         }
     }
 }
