@@ -15,18 +15,16 @@ namespace Challenges.Beginner
             
             Dictionary<int, string> map = new Dictionary<int, string>
             {
-                { 5, BUZZ },
                 { 3, FIZZ },
-                //{ 3 * 5, FIZZ + BUZZ }
+                { 5, BUZZ }
             };
 
-            map.Add(map.Keys.Aggregate(1, (x,y) => x * y), map.Values.Reverse()
-                                                                     .Aggregate((x, y) => x + y));
+            map.Add(map.Keys.Aggregate(1, (x, y) => x * y), map.Values.Aggregate((x, y) => x + y));
 
             List<string> result = new List<string>();
             for (int i = 1; i <= n; i++)
             {
-                var divider = map.Where(x => i % x.Key == 0).OrderByDescending(y => y.Key).FirstOrDefault();
+                var divider = map.LastOrDefault(x => i % x.Key == 0);
                 if (divider.Key == 0)
                 {
                     result.Add(i.ToString());
