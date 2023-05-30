@@ -37,6 +37,18 @@ Given an integer  `num`, return  _the number of steps to reduce it to zero_.
 	Step 4) 3 is odd; subtract 1 and obtain 2. 
 	Step 5) 2 is even; divide by 2 and obtain 1. 
 	Step 6) 1 is odd; subtract 1 and obtain 0.
+5. Middle of the Linked List
+		Given the  `head`  of a singly linked list, return  _the middle node of the linked list_.
+
+	If there are two middle nodes, return  **the second middle**  node.
+
+	**Example 1:**
+
+	![](https://assets.leetcode.com/uploads/2021/07/23/lc-midlist1.jpg)
+
+	**Input:** head = [1,2,3,4,5]
+	**Output:** [3,4,5]
+	**Explanation:** The middle node of the list is node 3.
 
 # Arrays and hashing
 
