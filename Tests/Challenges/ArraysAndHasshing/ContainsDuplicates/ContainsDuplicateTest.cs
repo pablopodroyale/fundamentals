@@ -1,6 +1,5 @@
 ﻿
 using Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates;
-using System.Linq.Expressions;
 
 namespace Tests.Challenges.ArraysAndHasshing.ContainsDuplicates
 {

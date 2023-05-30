@@ -1,10 +1,4 @@
 ﻿using Challenges.Beginner;
-using Fundamentals.Fundamentals.ArraysAndHashing.ContainsDuplicates;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests.Challenges.Beginner
 {

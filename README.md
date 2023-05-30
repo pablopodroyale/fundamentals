@@ -49,6 +49,15 @@ Given an integer  `num`, return  _the number of steps to reduce it to zero_.
 	**Input:** head = [1,2,3,4,5]
 	**Output:** [3,4,5]
 	**Explanation:** The middle node of the list is node 3.
+6. Ransom Note
+		Given two strings  `ransomNote`  and  `magazine`, return  `true` _if_ `ransomNote`  can be constructed by using the letters from `magazine` _and_ `false` _otherwise_.
+
+	Each letter in  `magazine`  can only be used once in  `ransomNote`.
+
+	**Example 1:**
+
+	**Input:** ransomNote = "a", magazine = "b"
+	**Output:** false
 
 # Arrays and hashing
 
