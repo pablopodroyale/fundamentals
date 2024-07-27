@@ -23,7 +23,7 @@ namespace Tests.Challenges.PrefixSum
                 yield return new object[]
                 {
                 new int[] { 10, 5, 2, 6 },
-                new int[][] { new int[] { 0, 1 }, new int[] { 3, 4 } },
+                new int[][] { new int[] { 0, 1 }, new int[] {2 , 3 } },
                 8,
                 new bool[] { false }
                 };
@@ -32,7 +32,6 @@ namespace Tests.Challenges.PrefixSum
 
         [Test]
         [TestCaseSource(nameof(TestCases))]
-        //[TestCase(new int[] { 10, 5, 2, 6 }, new int[][] { new int[] { 1, 2 }, new int[] { 3, 4 } }, 8, new bool[] { false })]
         public void PrefixSum(int[] nums,int[][] queries, int limit, bool[] expected) 
         {
             var result = _underTest.AnswerQueries(nums, queries, limit);

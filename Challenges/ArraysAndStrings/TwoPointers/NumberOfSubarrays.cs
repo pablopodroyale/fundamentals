@@ -8,11 +8,14 @@ namespace Challenges.ArraysAndStrings.TwoPointers
 {
     public class NumberOfSubarrays
     {
-        /**
-         * Given an array of positive integers nums and an integer k, 
-         * return the number of subarrays,
-         * where the product of all the elements in the subarray is strictly less than k
-        */
+        /// <summary>
+        /// Given an array of positive integers nums and an integer k, 
+        /// return the number of subarrays,
+        /// where the product of all the elements in the subarray is strictly less than k
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
         public int NumberOfSubarraysProductLessThanK(int[] nums, int k)
         {
             int current = 1;

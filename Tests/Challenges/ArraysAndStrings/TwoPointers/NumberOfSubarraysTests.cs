@@ -17,7 +17,7 @@ namespace Tests.Challenges.ArraysAndStrings.TwoPointers
         }
 
         [Test]
-        [TestCase(new int[] { 10, 5, 2, 6 }, 1, 8)]
+        [TestCase(new int[] { 10, 5, 2, 6 }, 15, 6)]
         public void NumberOfSubarraysProductLessThanK(int[] nums, int k, int expected)
         {
             int result = _underTest.NumberOfSubarraysProductLessThanK(nums, k);
